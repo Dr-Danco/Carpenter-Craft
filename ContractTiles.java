@@ -12,7 +12,7 @@ public class ContractTiles extends Block implements ITextureProvider {
     }
     public String getTextureFile()
     {
-            return "/contractorcraft/terrain.png";
+            return "/carpentercraft/terrain.png";
     }
 
 }

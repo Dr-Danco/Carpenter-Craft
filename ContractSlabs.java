@@ -53,7 +53,7 @@ super(i, j, Material.wood);
         }
 	    public String getTextureFile()
 	    {
-	        return "/contractorcraft/terrain.png";
+	        return "/carpentercraft/terrain.png";
 	            
 	    }
 

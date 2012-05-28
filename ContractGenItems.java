@@ -9,7 +9,7 @@ public class ContractGenItems extends Item implements ITextureProvider {
 
 	public String getTextureFile() {
 		
-		return "/contractorcraft/gui/items.png";
+		return "/carpentercraft/gui/items.png";
 	}
 
 }

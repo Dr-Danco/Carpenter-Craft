@@ -8,7 +8,7 @@ public class ContractTravBlock extends Block implements ITextureProvider {
 	}
     public String getTextureFile()
     {
-            return "/contractorcraft/terrain.png";
+            return "/carpentercraft/terrain.png";
     }
     public int idDropped(int par1, Random par2Random, int par3)
     {

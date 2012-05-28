@@ -33,13 +33,14 @@ public class ContractDeskLamp extends Block implements ITextureProvider {
 	            	   par1 == ContractAddBlocks.satilloTwo.blockID || par1 == ContractAddBlocks.satilloThree.blockID ||
 	            	   par1 == ContractAddBlocks.ceramicTile.blockID || par1 == ContractAddBlocks.ceraTile2.blockID ||
 	            	   par1 == ContractAddBlocks.ceraTile3.blockID || par1 == ContractAddBlocks.marbleTile1.blockID ||
-	            	   par1 == ContractAddBlocks.marbleTile2.blockID;
+	            	   par1 == ContractAddBlocks.marbleTile2.blockID || par1 == ContractAddBlocks.marbleBlock.blockID ||
+	            	   par1 == ContractAddBlocks.travertineBlock.blockID;
 	            	   
 	        
 	    }
 	    public String getTextureFile()
 	    {
-	        return "/contractorcraft/terrain.png";
+	        return "/carpentercraft/terrain.png";
 	            
 	    }
 

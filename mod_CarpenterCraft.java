@@ -5,10 +5,10 @@ import java.util.Random;
 import net.minecraft.client.Minecraft;
 import net.minecraft.src.forge.MinecraftForgeClient;
 
-public class mod_ContractorCraft extends BaseMod {
+public class mod_CarpenterCraft extends BaseMod {
 			
 			
-public mod_ContractorCraft() {
+public mod_CarpenterCraft() {
 		
 	}
 public void load() {
@@ -410,7 +410,7 @@ public void generateSurface(World world, Random random, int chunkX, int chunkZ)
 
 public String getVersion() {
 
-		return "v1.2.5";
+		return "v1.0.0 for Minecraft 1.2.5";
 	}
 public boolean onTickInGame(float f, Minecraft minecraft)
 {
