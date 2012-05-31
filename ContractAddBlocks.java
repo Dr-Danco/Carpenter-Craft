@@ -2,6 +2,7 @@ package net.minecraft.src;
 
 public class ContractAddBlocks {
 
+
 	/** Tile **/
 	// Travertine //
 	public static final Block travTile = new ContractTiles(149,
@@ -111,7 +112,10 @@ public class ContractAddBlocks {
 	public static final Block brWoolStairs = new ContractStairs(186,
 	37).setHardness(3F).setResistance(4F).setBlockName("woolStairs");
 	public static final Block wwWoolStairs = new ContractStairs(208,
-	38).setHardness(3F).setResistance(4F).setBlockName("woolSlab");
+	38).setHardness(3F).setResistance(4F).setBlockName("woolStairs");
+	// Corner stairs? //
+	public static final Block cornertest = new ContractCornerStairs(211,
+	38).setHardness(3F).setResistance(4F).setBlockName("cornerStairs");
 	
 	/** Slabs **/
 	public static final Block marbleSlab = new ContractSlabs(187,
@@ -163,10 +167,10 @@ public class ContractAddBlocks {
 
 	/** Other Blocks **/
 	public static final Block travertine = new ContractTravBlock(163,
-	13).setHardness(3.2F).setResistance(5F).setStepSound(Block.soundStoneFootstep)
+	13).setHardness(1.0F).setResistance(5F).setStepSound(Block.soundStoneFootstep)
 	.setBlockName("travOreBlock");
 	public static final Block marble = new ContractMarbleBlock(164,
-	15).setHardness(4.0F).setResistance(5F).setStepSound(Block.soundStoneFootstep)
+	15).setHardness(1.2F).setResistance(5F).setStepSound(Block.soundStoneFootstep)
 	.setBlockName("marbleOreBlock");
 	
 	

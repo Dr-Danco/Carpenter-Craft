@@ -383,6 +383,10 @@ public void load() {
     ModLoader.addName(ContractAddItems.rawtTile2, "Tile");
     ModLoader.addShapelessRecipe(new ItemStack(ContractAddItems.rawtTile2, 4),
     new Object[] {new ItemStack(ContractAddItems.rawtTile, 1)});
+    
+    //testballs//
+    ModLoader.registerBlock(ContractAddBlocks.cornertest);
+    ModLoader.addName(ContractAddBlocks.cornertest, "corner Test");
 
 	
 
@@ -410,7 +414,7 @@ public void generateSurface(World world, Random random, int chunkX, int chunkZ)
 
 public String getVersion() {
 
-		return "v1.0.0 for Minecraft 1.2.5";
+		return "v1.1 for Minecraft 1.2.5";
 	}
 public boolean onTickInGame(float f, Minecraft minecraft)
 {
@@ -449,6 +453,7 @@ public boolean onTickInGUI(float f, Minecraft minecraft, GuiScreen guiscreen)
    list.add(new ItemStack(ContractAddBlocks.goldStairs, 1, i));
    list.add(new ItemStack(ContractAddBlocks.ironStairs, 1, i));
    list.add(new ItemStack(ContractAddBlocks.diamondStairs, 1, i));
+   list.add(new ItemStack(ContractAddBlocks.wwWoolStairs, 1, i));
    list.add(new ItemStack(ContractAddBlocks.wWoolStairs, 1, i));
    list.add(new ItemStack(ContractAddBlocks.gWoolStairs, 1, i));
    list.add(new ItemStack(ContractAddBlocks.bWoolStairs, 1, i));
@@ -486,6 +491,7 @@ public boolean onTickInGUI(float f, Minecraft minecraft, GuiScreen guiscreen)
    list.add(new ItemStack(ContractAddBlocks.brWoolSlab, 1, i));
    list.add(new ItemStack(ContractAddBlocks.gnWoolSlab, 1, i));
    list.add(new ItemStack(ContractAddBlocks.lbWoolSlab, 1, i));
+   list.add(new ItemStack(ContractAddBlocks.cornertest, 1, i));
 
 
   }
