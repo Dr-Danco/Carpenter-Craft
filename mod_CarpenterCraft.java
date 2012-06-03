@@ -16,6 +16,7 @@ public void load() {
 	MinecraftForgeClient.preloadTexture("/contractorcraft/gui/items.png");
 	ModLoader.setInGameHook(this, true, false);
 	ModLoader.setInGUIHook(this, true, false);
+	
 	/**  BLOCKS  **/
 	
 	/* Tiles */
@@ -108,6 +109,18 @@ public void load() {
 	ModLoader.addRecipe(new ItemStack(ContractAddBlocks.marbleBlock, 1),
 	new Object [] {"###", "###", "###", Character.valueOf('#'), ContractAddItems.marbleRock});
     
+	// Black Marble Block //
+	ModLoader.registerBlock(ContractAddBlocks.bmarbleBlock);
+	ModLoader.addName(ContractAddBlocks.bmarbleBlock, "Marble Block");
+	ModLoader.addShapelessRecipe(new ItemStack(ContractAddBlocks.bmarbleBlock, 1),
+    new Object[] {new ItemStack(ContractAddBlocks.marbleBlock, 1), new ItemStack(Item.dyePowder, 1, 0)});
+	
+	// Blue Marble Block //
+	ModLoader.registerBlock(ContractAddBlocks.blmarbleBlock);
+	ModLoader.addName(ContractAddBlocks.blmarbleBlock, "Marble Block");
+	ModLoader.addShapelessRecipe(new ItemStack(ContractAddBlocks.blmarbleBlock, 1),
+    new Object[] {new ItemStack(ContractAddBlocks.marbleBlock, 1), new ItemStack(Item.dyePowder, 1, 4)});
+		
     // Travertine Block //
     ModLoader.registerBlock(ContractAddBlocks.travertineBlock);
     ModLoader.addName(ContractAddBlocks.travertineBlock, "Travertine Block");
@@ -341,6 +354,14 @@ public void load() {
 	ModLoader.addRecipe(new ItemStack(ContractAddBlocks.rWoolSlab, 6),
 	new Object [] {"   ", "   ", "###", Character.valueOf('#'), new ItemStack(Block.cloth, 1, 14)});
 	
+	/* Pillars */
+	// Marble //
+	ContractPillarRender marblePillar = new ContractPillarRender();
+	ModLoader.registerTileEntity(net.minecraft.src.ContractTileEntity.class, "marblePillarEntity", marblePillar);
+	ModLoader.addName(ContractAddItems.marblePillar, "Marble Pillar");
+	ContractAddItems.marblePillar.iconIndex = ModLoader.addOverride("/gui/items.png", "/carpentercraft/sb/pillaritem.png");
+    ModLoader.addRecipe(new ItemStack(ContractAddItems.marblePillar, 3),
+    new Object [] {" # ", " # ", " # ", Character.valueOf('#'), ContractAddBlocks.marbleBlock});
 	
 	/* Other */
     
@@ -384,9 +405,7 @@ public void load() {
     ModLoader.addShapelessRecipe(new ItemStack(ContractAddItems.rawtTile2, 4),
     new Object[] {new ItemStack(ContractAddItems.rawtTile, 1)});
     
-    //testballs//
-    ModLoader.registerBlock(ContractAddBlocks.cornertest);
-    ModLoader.addName(ContractAddBlocks.cornertest, "corner Test");
+
 
 	
 
@@ -409,12 +428,12 @@ public void generateSurface(World world, Random random, int chunkX, int chunkZ)
                     (new WorldGenMinable(ContractAddBlocks.marble.blockID, 10)).generate(world, random, randPosX, randPosY, randPosZ);
               
             }
-        }
+}
 
 
 public String getVersion() {
 
-		return "v1.1 for Minecraft 1.2.5";
+		return "v1.2 for Minecraft 1.2.5";
 	}
 public boolean onTickInGame(float f, Minecraft minecraft)
 {
@@ -424,6 +443,7 @@ public boolean onTickInGame(float f, Minecraft minecraft)
   }
   return true;
 }
+@SuppressWarnings({ "rawtypes", "unchecked" })
 public boolean onTickInGUI(float f, Minecraft minecraft, GuiScreen guiscreen)
 {
   if((guiscreen instanceof GuiContainerCreative) && !(creativeInventory instanceof GuiContainerCreative) && !minecraft.theWorld.isRemote)
@@ -447,6 +467,9 @@ public boolean onTickInGUI(float f, Minecraft minecraft, GuiScreen guiscreen)
    list.add(new ItemStack(ContractAddBlocks.streetLamp2, 1, i));
    list.add(new ItemStack(ContractAddBlocks.marbleBlock, 1, i));
    list.add(new ItemStack(ContractAddBlocks.travertineBlock, 1, i));
+   list.add(new ItemStack(ContractAddBlocks.bmarbleBlock, 1, i));
+   list.add(new ItemStack(ContractAddBlocks.blmarbleBlock, 1, i));
+   list.add(new ItemStack(ContractAddItems.marblePillar, 1, i));
    list.add(new ItemStack(ContractAddBlocks.marbleStairs, 1, i));
    list.add(new ItemStack(ContractAddBlocks.travStairs, 1, i));
    list.add(new ItemStack(ContractAddBlocks.endStairs, 1, i));
@@ -491,8 +514,8 @@ public boolean onTickInGUI(float f, Minecraft minecraft, GuiScreen guiscreen)
    list.add(new ItemStack(ContractAddBlocks.brWoolSlab, 1, i));
    list.add(new ItemStack(ContractAddBlocks.gnWoolSlab, 1, i));
    list.add(new ItemStack(ContractAddBlocks.lbWoolSlab, 1, i));
-   list.add(new ItemStack(ContractAddBlocks.cornertest, 1, i));
 
+   
 
   }
   creativeInventory = guiscreen;

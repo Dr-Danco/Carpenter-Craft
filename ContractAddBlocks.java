@@ -62,10 +62,16 @@ public class ContractAddBlocks {
 	/** Building Blocks **/
 	public static final Block marbleBlock = new ContractBlock(165,
 	16).setHardness(1.0F).setStepSound(Block.soundStoneFootstep)
-	.setBlockName("marBlock");
+	.setBlockName("marbleBlock");
 	public static final Block travertineBlock = new ContractBlock(166,
 	17).setHardness(1.1F).setStepSound(Block.soundStoneFootstep)
 	.setBlockName("travertineBlock");
+	public static final Block bmarbleBlock = new ContractBlock(212,
+	40).setHardness(1.0F).setStepSound(Block.soundStoneFootstep)
+	.setBlockName("marbleBlock");
+	public static final Block blmarbleBlock = new ContractBlock(213,
+	41).setHardness(1.0F).setStepSound(Block.soundStoneFootstep)
+	.setBlockName("marbleBlock");
 	
 	/** Stairs **/
 	public static final Block marbleStairs = new ContractStairs(167,
@@ -113,9 +119,7 @@ public class ContractAddBlocks {
 	37).setHardness(3F).setResistance(4F).setBlockName("woolStairs");
 	public static final Block wwWoolStairs = new ContractStairs(208,
 	38).setHardness(3F).setResistance(4F).setBlockName("woolStairs");
-	// Corner stairs? //
-	public static final Block cornertest = new ContractCornerStairs(211,
-	38).setHardness(3F).setResistance(4F).setBlockName("cornerStairs");
+
 	
 	/** Slabs **/
 	public static final Block marbleSlab = new ContractSlabs(187,
@@ -163,6 +167,10 @@ public class ContractAddBlocks {
 	37).setHardness(3F).setResistance(4F).setBlockName("woolSlab");
 	public static final Block wwWoolSlab = new ContractSlabs(207,
 	38).setHardness(3F).setResistance(4F).setBlockName("woolSlab");
+	
+	/** Pillars **/
+	// Marble //
+	public static Block marblePillar = new ContractPillar(211, net.minecraft.src.ContractTileEntity.class).setResistance(.5F).setHardness(1F).setBlockName("marblePillar");
 	
 
 	/** Other Blocks **/

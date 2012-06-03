@@ -2,6 +2,8 @@ package net.minecraft.src;
 
 public class ContractAddItems {
 
+	/** Pillars **/
+	public static final Item marblePillar = new ContractPillarItem(6000, ContractAddBlocks.marblePillar).setItemName("marblePillar");
 	/** Misc. **/
 	public static final Item travRock = new ContractGenItems(149).setIconIndex(0).setItemName("travRock");
 	public static final Item marbleRock = new ContractGenItems(150).setIconIndex(1).setItemName("marbleRock");
